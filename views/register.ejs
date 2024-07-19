@@ -17,43 +17,49 @@
     <form action="/user/register" method="post">
       <div class="mb-3">
         <label for="userName" class="form-label">UserName</label>
-        <input type="text" class="form-control" placeholder="Enter UserName" id="exampleInputEmail1" name="userName" required>
+        <input type="text" class="form-control" placeholder="Enter UserName" id="exampleInputEmail1" name="userName"
+          required>
         <% if(errors.userName){ %>
-          <p>
+          <p style="color: red;">
             <%= errors.userName %>
           </p>
           <% } %>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" placeholder="Enter Email" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"
-          required>
+        <input type="email" class="form-control" placeholder="Enter Email" id="exampleInputEmail1"
+          aria-describedby="emailHelp" name="email" required>
         <% if (errors.email) { %>
-          <p>
+          <p style="color: red;">
             <%= errors.email %>
           </p>
           <% } %>
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" placeholder="Enter Password" id="exampleInputPassword1" name="password" required>
+        <input type="password" class="form-control" placeholder="Enter Password" id="exampleInputPassword1"
+          name="password" required>
         <% if (errors.password) { %>
-          <p>
+          <p style="color: red;">
             <%= errors.password %>
           </p>
           <% } %>
       </div>
       <div class="mb-3">
         <label for="confirmpassword" class="form-label">Confirm Password</label>
-        <input type="password" class="form-control" placeholder="Enter ConfirmPassword" id="exampleInputPassword1" name="confirmPassword" required>
+        <input type="password" class="form-control" placeholder="Enter ConfirmPassword" id="exampleInputPassword1"
+          name="confirmPassword" required>
         <% if (errors.confirmPassword) { %>
-          <p>
+          <p style="color: red;">
             <%= errors.confirmPassword %>
           </p>
           <% } %>
       </div>
+      <div><button type="submit" class="btn btn-primary">Submit</button>
+        <p></p>
+        <a href="/user/login">Allready Register Please Login</a>
+      </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

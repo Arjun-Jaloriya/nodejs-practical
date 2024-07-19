@@ -131,7 +131,7 @@ const changePassword = async (req, res) => {
 
     user.password = await bcrypt.hash(newPassword, 10);
     await user.save();
-    res.redirect('/user/dashboard?status=200&msg=Password changed successfully');
+    res.redirect('/user/dashboard');
   } catch (error) {
     console.log(error);
     res.redirect('/user/dashboard?status=500&msg=Something went wrong');
